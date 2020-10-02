@@ -1,0 +1,43 @@
+<resources>
+    <string name="BB1">Our Buses</string>
+    <string name="BB2">Royal Travels</string>
+    <string name="BB3">Bus No</string>
+    <string name="BB4">Arrival</string>
+    <string name="BB5">Departure</string>
+    <string name="BB6">Time</string>
+    <string name="BB7">Ticket Cost</string>
+    <string name="BB8">Condition</string>
+    <string name="BB9">WP NC 8976</string>
+    <string name="BB10">Batticaloa</string>
+    <string name="BB11">Colombo</string>
+    <string name="BB12">8.00 pm(Every day)</string>
+    <string name="BB13">1200/=</string>
+    <string name="BB14">Full A/C</string>
+    <string name="Bus">e-Booking</string>
+    <string name="Bu1"> Book</string>
+    <string name="Run">Run Bus</string>
+    <string name="AB2">NCG Travels</string>
+    <string name="aB9">NP BC 3476</string>
+    <string name="aB10">Jaffna</string>
+    <string name="aB11">Colombo</string>
+    <string name="aB12">9.00 pm(Every day)</string>
+    <string name="aB13">1400/=</string>
+    <string name="aB14">Full A/C</string>
+    <string name="Bcu1"> Book</string>
+    <string name="BBB2">Surena Travels</string>
+    <string name="aaB9">WP BC 3906</string>
+    <string name="aaB10">Colombo</string>
+    <string name="aaB11">Batticaloa</string>
+    <string name="aaB12">8.00 pm(Every day)</string>
+    <string name="aaB13">1300/=</string>
+    <string name="aaB14">Full A/C</string>
+    <string name="invalid_travelsname"> Enter the Travels Name</string>
+    <string name="invalid_drivername"> Enter the driver name</string>
+    <string name="invalid_departure"> Enter the departure location</string>
+    <string name="invalid_arrival"> Enter the arrivals</string>
+    <string name="ivalid_busno">Enter the Bus No</string>
+    <string name="invalid_noofsets">Enter the No of Seats</string>
+    <string name="ivalid_ticketprice">Enter the Ticket price</string>
+
+
+</resources>
