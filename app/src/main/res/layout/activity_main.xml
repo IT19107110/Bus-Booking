@@ -5,7 +5,7 @@
     android:id="@+id/bUS "
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7DA5C5"
+    android:background="@drawable/back"
     tools:context=".MainActivity">
 
 
@@ -19,6 +19,7 @@
         android:ems="10"
         android:hint="Enter the Ticket Price"
         android:inputType="number"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@color/cardview_light_background"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/s6" />
@@ -29,52 +30,37 @@
         android:layout_height="66dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bus" />
+        app:srcCompat="@drawable/logo" />
 
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="125dp"
-        android:layout_height="38dp"
+        android:layout_width="167dp"
+        android:layout_height="36dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="179dp"
         android:layout_marginRight="179dp"
         android:text="@string/Run"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
+        android:textColor="#C51204"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="105dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginBottom="332dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView34"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintStart_toEndOf="@+id/divider2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/pro2" />
-
 
     <View
         android:id="@+id/divider2"
         android:layout_width="453dp"
         android:layout_height="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -86,7 +72,7 @@
         android:layout_marginLeft="174dp"
         android:layout_marginTop="5dp"
         android:text="Bus Details"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#C51204"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +85,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="5dp"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="#D0CC0000"
         android:text="ADD"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
@@ -115,7 +101,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="36dp"
         android:text="Travels Name"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2" />
@@ -129,6 +115,7 @@
         android:ems="10"
         android:hint=" Enter the Travels Name"
         android:inputType="textPersonName"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@android:color/background_light"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -141,7 +128,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="Vehicle No"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -154,7 +141,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="DriverName"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -167,7 +154,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="Departure"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -180,7 +167,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="Arrival"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -193,7 +180,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="Total Seats"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -206,7 +193,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
         android:text="Ticket Price"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -221,6 +208,7 @@
         android:ems="10"
         android:hint=" Enter the Vehicle No"
         android:inputType="number"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@color/cardview_light_background"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/s1" />
@@ -235,6 +223,7 @@
         android:ems="10"
         android:hint="Enter the Driver Name"
         android:inputType="textPersonName"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@color/cardview_light_background"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/s2" />
@@ -249,6 +238,7 @@
         android:ems="10"
         android:hint=" Departure"
         android:inputType="textPersonName"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@android:color/background_light"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/s3" />
@@ -263,6 +253,7 @@
         android:ems="10"
         android:hint="Arrival"
         android:inputType="textPersonName"
+        android:textColor="@android:color/background_light"
         android:textColorHint="@color/cardview_light_background"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/s4" />
@@ -277,6 +268,7 @@
         android:ems="10"
         android:hint="Enter the total seats"
         android:inputType="number"
+        android:textColor="@color/cardview_light_background"
         android:textColorHint="@android:color/background_light"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/s5" />
@@ -288,7 +280,7 @@
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
         android:layout_marginTop="5dp"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="#D0CC0000"
         android:text="View"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
@@ -303,7 +295,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="9dp"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="#D0CC0000"
         android:text="UPDATE"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
@@ -318,7 +310,7 @@
         android:layout_marginLeft="112dp"
         android:layout_marginTop="9dp"
         android:layout_marginBottom="4dp"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="#D0CC0000"
         android:text="DELETE"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
