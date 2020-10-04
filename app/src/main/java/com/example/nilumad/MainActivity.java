@@ -21,7 +21,7 @@ import com.google.common.collect.Range;
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
     EditText n1,n2,n3,n4,n5,n6,n7;
-    Button bb1,bb2,bb3,bb4;
+    Button bb1,bb2,bb3,bb4,search;
     AwesomeValidation awesomeValidation;
     Spinner spinner1;
     Spinner spinner2;
@@ -47,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
         bb2=(Button)findViewById(R.id.bt2);
         bb3=(Button)findViewById(R.id.b3);
         bb4=(Button)findViewById(R.id.b4);
+        search=(Button)findViewById(R.id.button);
 
         AddData();
         viewAll();
         UpdateData();
         deleteData();
+        SearchData();
 
         awesomeValidation=new AwesomeValidation(ValidationStyle.BASIC);
 
@@ -141,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         boolean isUpdate =myDb.updateData(n1.getText().toString(),n2.getText().toString(),n3.getText().toString(),n4.getText().toString(),n5.getText().toString(),n6.getText().toString(),n7.getText().toString());
-                        if(isUpdate == true && awesomeValidation.validate())
+                        if(isUpdate == true && awesomeValidation.validate() )
                             Toast.makeText(MainActivity.this,"Bus Details Updateded",Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(MainActivity.this,"Updation Fail",Toast.LENGTH_LONG).show();
@@ -156,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                                    public void onClick(View view) {
                                        boolean isInserted= myDb.insertData(n1.getText().toString(),n2.getText().toString(),n3.getText().toString(),n4.getText().toString(),n5.getText().toString(),n6.getText().toString(),n7.getText().toString());
                                        if(isInserted==true && awesomeValidation.validate())
-                                           Toast.makeText(MainActivity.this,"Data is Inserted",Toast.LENGTH_LONG).show();
+                                           Toast.makeText( MainActivity.this,"data inserted",Toast.LENGTH_LONG ).show();
                                        else
                                            Toast.makeText(MainActivity.this,"Data not Inserted",Toast.LENGTH_LONG).show();
 
@@ -200,4 +202,39 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage(Message);
         builder.show();
     }
+    public void SearchData(){
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor data = myDb.searchData(n2.getText().toString());
+                if (data.getCount() == 0) {
+                    //Show Message
+                    showMessage("Error ", "Nothing Found");
+                    return;
+                }
+                StringBuffer stringBuffer = new StringBuffer();
+                while (data.moveToNext()) {
+                    n1.setText( data.getString(0));
+                    n2.setText( data.getString(1));
+                    n3.setText( data.getString(2));
+                    n4.setText( data.getString(3));
+                    n5.setText( data.getString(4));
+                    n6.setText( data.getString(5));
+                    n7.setText( data.getString(6));
+                }
+            }
+        });
+
+    }
+    private void clearControls(){
+        n1.setText("");
+        n2.setText("");
+        n3.setText("");
+        n4.setText("");
+        n5.setText("");
+        n6.setText("");
+        n7.setText("");
+    }
+
 }

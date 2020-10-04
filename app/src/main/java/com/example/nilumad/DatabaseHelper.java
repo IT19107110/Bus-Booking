@@ -69,7 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,TravelsName);
-
+        contentValues.put(COL_2, VehicleNo);
         contentValues.put(COL_3, Drivername);
         contentValues.put(COL_4, Departure);
         contentValues.put(COL_5, Arrival);
@@ -83,4 +83,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return sqLiteDatabase.delete(TABLE_NAME,"VehicleNo = ?",new String[] {VehicleNo});
 
     }
+    public Cursor searchData(String VehicleNo) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor data = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COL_2 + "= '" + VehicleNo + "'",null);
+        return data;
+    };
 }
