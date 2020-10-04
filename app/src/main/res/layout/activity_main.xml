@@ -339,4 +339,17 @@
         app:layout_constraintStart_toEndOf="@+id/s5"
         app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Search"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintStart_toEndOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/s7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
