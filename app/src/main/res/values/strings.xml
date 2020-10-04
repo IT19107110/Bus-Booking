@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bus Booking</string>
+    <string name="invalid_name">Please enter valid name</string>
+    <string name="invalid_email">"Please enter valid email "</string>
+    <string name="invalid_phoneNo">Please enter valid phone number</string>
+    <string name="invalid_tname">Please select the travels name</string>
+    <string name="invalid_departure">Please select the location</string>
+    <string name="invalid_arrival">Please select the location</string>
+    <string name="invalid_date">Please select the date</string>
+    <string name="invalid_seats">Please select number of seats</string>
+    <string name="invalid_phone">Please enter valid phone number</string>
+    <string name="invalid_cost">Please click cost button</string>
+</resources>
